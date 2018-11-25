@@ -28,8 +28,9 @@ class InteractiveRecord
   
   def values_for_insert 
     values = []
-    values.join(", ")
     
+    values.join(", ")
+  end  
   
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
