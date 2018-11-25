@@ -50,8 +50,9 @@ class InteractiveRecord
   end
   
   def self.find_by(options)
-    pair = []
-    options.each {|k, v| pair << "#{k} = #{v}"}
+    col_list = options.keys
+    volue_list = option.
+    options.each {|k, v|  "#{k} = #{v}"}
     sql = "SELECT * FROM #{self.table_name} WHERE #{pair[0]}"
     DB[:conn].execute(sql)
   end
