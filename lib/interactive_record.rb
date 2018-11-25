@@ -22,7 +22,8 @@ class InteractiveRecord
      self.class.table_name
   end
   
-  def column_names 
+  def column_names_for_insert
+    
   
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
