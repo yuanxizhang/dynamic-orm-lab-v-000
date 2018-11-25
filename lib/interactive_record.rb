@@ -27,6 +27,8 @@ class InteractiveRecord
   end
   
   def values_for_insert 
+    values = []
+    values.join(", ")
     
   
   def self.find_by_name(name)
