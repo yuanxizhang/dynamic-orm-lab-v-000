@@ -44,8 +44,8 @@ class InteractiveRecord
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
   end
   
-  def self.find_by(self.column_names.to_sym.join", ")
-    sql = "SELECT * FROM #{self.table_name} WHERE attribute = '#{name}'"
+  def self.find_by(options)
+    sql = "SELECT * FROM #{self.table_name} WHERE #{options}.each{|key, value| options[key] = value}"
     DB[:conn].execute(sql)
   end
 end
