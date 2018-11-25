@@ -18,6 +18,10 @@ class InteractiveRecord
 	  options.each{|key, value| send("#{key}=", value)}
   end 
   
+  def table_name_for_insert 
+     
+  end
+  
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
