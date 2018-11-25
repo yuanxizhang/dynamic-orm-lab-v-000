@@ -12,7 +12,7 @@ class InteractiveRecord
 	  table_info = DB[:CONN].execute(sql)
 	  column_names = []
 	  table_info.each{|col| column_names << col["name"] }
-	  columns.compact
+	  column_names.compact
 	end 
 	
 	def initialize(options ={})
