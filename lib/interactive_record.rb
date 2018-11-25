@@ -53,6 +53,8 @@ class InteractiveRecord
     conditions = []
     options.each do |k, v| 
       conditions << "#{k} = #{v}" unless v.is_a? String
+      conditions << "#{k} = #{v}.to_s" if v.is_a? String
+    end
     list = conditions.join(", ")
     sql = "SELECT * FROM #{self.table_name} WHERE #{list};"
     DB[:conn].execute(sql)
