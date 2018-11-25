@@ -13,7 +13,9 @@ class InteractiveRecord
 	  result.each{|c| columns << c[#{"name"}] }
 	  columns.compact
 	end 
-
+	
+	def initialize(options ={})
+  end 
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
