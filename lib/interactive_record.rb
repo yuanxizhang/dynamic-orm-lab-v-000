@@ -53,7 +53,7 @@ class InteractiveRecord
     conditions = []
     options.each {|k, v|  conditions << "#{k} = #{v}"}
     list = conditions.join(", ")
-    sql = "SELECT * FROM #{self.table_name} WHERE #{list}
+    sql = "SELECT * FROM #{self.table_name} WHERE #{list};"
     DB[:conn].execute(sql)
   end
 end
