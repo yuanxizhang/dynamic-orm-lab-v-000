@@ -51,9 +51,9 @@ class InteractiveRecord
   
   def self.find_by(options)
     
-    list = options.to_a
+    list = options.keys
     # options.each {|k, v|  key_value_list << "#{k} = #{v}"}
-    sql = "SELECT * FROM #{self.table_name} WHERE #{list[0][0] = #{list[0][1]}"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{options.keys[0]} = "
     DB[:conn].execute(sql)
   end
 end
