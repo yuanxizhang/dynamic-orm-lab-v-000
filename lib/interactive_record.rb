@@ -5,6 +5,10 @@ class InteractiveRecord
   def self.table_name
 		self.class.to_s.downcase.pluralize
 	end
+	
+	def self.column_names 
+	  sql = "PRAGMA table_info()"
+	end 
 
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
