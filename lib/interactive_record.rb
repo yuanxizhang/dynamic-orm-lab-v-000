@@ -23,7 +23,7 @@ class InteractiveRecord
   end
   
   def column_names_for_insert
-    
+    self.class.
   
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
