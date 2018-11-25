@@ -35,7 +35,7 @@ class InteractiveRecord
   end  
   
   def save 
-    sql = "INSERT INTO #{table_name} (#{column_names})"
+    sql = "INSERT INTO #{table_name_for_insert} (#{column_names_for_insert}) VALUES (#{values_for_insert})"
   
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
