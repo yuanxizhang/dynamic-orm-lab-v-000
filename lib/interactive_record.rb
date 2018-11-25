@@ -11,7 +11,7 @@ class InteractiveRecord
 	  sql = "PRAGMA table_info #{self.table_name})"
 	  table_info = DB[:CONN].execute(sql)
 	  colunms = []
-	  table_info.each{|c| columns << c[#{"name"}] }
+	  table_info.each{|c| columns << c["name"] }
 	  columns.compact
 	end 
 	
