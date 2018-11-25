@@ -7,7 +7,7 @@ class InteractiveRecord
 	end
 	
 	def self.column_names 
-	  sql = "PRAGMA table_info()"
+	  sql = "PRAGMA table_info #{self.table_name})"
 	end 
 
   def self.find_by_name(name)
