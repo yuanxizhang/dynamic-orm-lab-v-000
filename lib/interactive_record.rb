@@ -53,7 +53,7 @@ class InteractiveRecord
     key_list = options.keys
     volue_list = options.values
     kay_value_list = []
-    options.each {|k, v|  key_Value_list << "#{k} = #{v}"}
+    options.each {|k, v|  key_value_list << "#{k} = #{v}"}
     sql = "SELECT * FROM #{self.table_name} WHERE #{key_value_list[0]"
     DB[:conn].execute(sql)
   end
