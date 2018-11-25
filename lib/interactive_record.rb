@@ -50,10 +50,9 @@ class InteractiveRecord
   end
   
   def self.find_by(options)
-    key_list = options.keys
-    volue_list = options.values
+    
     list = options.to_a
-    options.each {|k, v|  key_value_list << "#{k} = #{v}"}
+    # options.each {|k, v|  key_value_list << "#{k} = #{v}"}
     sql = "SELECT * FROM #{self.table_name} WHERE #{list[0][0] = list[0][1]"
     DB[:conn].execute(sql)
   end
