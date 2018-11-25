@@ -17,7 +17,7 @@ class InteractiveRecord
 	end 
 	
 	def initialize(options ={})
-	  options.each{|key, value| send("#{key}=", value)}
+	  options.each{|property, value| self.send("#{property}=", value)}
   end 
   
   def table_name_for_insert 
