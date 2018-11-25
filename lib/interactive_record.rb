@@ -15,7 +15,7 @@ class InteractiveRecord
 	end 
 	
 	def initialize(options ={})
-	  options.each{|key, value| send("#{key}=", value)
+	  options.each{|key, value| send("#{key}=", value)}
   end 
   
   def self.find_by_name(name)
