@@ -51,7 +51,7 @@ class InteractiveRecord
   
   def self.find_by(options)
     conditions = []
-    options.each {|k, v|  conditions << "#{k} = #{v}" }
+    options.each {|k, v| v.is_a? String conditions << "#{k} = #{v}" }
     list = conditions.join(", ")
     sql = "SELECT * FROM #{self.table_name} WHERE #{list};"
     DB[:conn].execute(sql)
