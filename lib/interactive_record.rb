@@ -23,7 +23,7 @@ class InteractiveRecord
   end
   
   def column_names_for_insert
-    self.class.column_names
+    self.class.column_names.join(", ")
   end
   
   def self.find_by_name(name)
