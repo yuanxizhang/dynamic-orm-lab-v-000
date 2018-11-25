@@ -30,7 +30,7 @@ class InteractiveRecord
   
   def values_for_insert 
     values = []
-    self.class.column_names.each{|col| values << self.col}
+    self.class.column_names.each{|col| values << "'#{send(col_name)}'" unless send(col_name).nil?
     values.join(", ")
   end  
   
